@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+class patient{
+
+private:
+	
+string name;
+
+int age;
+
+string history;
+
+public :
+	
+patient();
+	
+patient(string x,int y,string z);
+			
+	void setname(string x);
+			string getname();
+	
+void setage(int x);
+			
+int getage();
+        
+ void sethistory(string x);
+			string gethistory();
+			
+			
+			
+};

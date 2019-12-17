@@ -1,0 +1,31 @@
+patient h1;
+
+string x;
+
+cout<<"enter the history of patient"<<endl;
+cin>>x;
+
+h1.sethistory(x);
+
+int z;
+cout<<"enter the age of patient"<<endl;
+cin>>z;
+
+h1.setage(z);
+string y;
+
+cout<<"enter patient name"<<endl;
+cin>>y;
+
+h1.setname(y);
+
+cout<<"all information about the patient"<<endl;
+cout<<"patient name is"<<endl;
+cout<<h1.getname()<<endl;
+cout<<"patient age is"<<endl;
+cout<<h1.getage()<<endl;
+cout<<"history of patient"<<endl;
+myfile<<"the patient disease :"<<endl;
+myfile<<h1.gethistory()<<endl;
+cout << h1.gethistory()<<endl;
+cout<< "     End of the patient information     "<<endl;
