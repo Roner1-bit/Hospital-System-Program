@@ -111,7 +111,7 @@ int u;
 cin>>u;
 d1.setage(u);
 cout<<"choose one department of the doc you want (Neurology-Oncology-Emergency-Obstetrics)"<<endl;
-string f;
+string f;/
 cin>>f;
 d1.setdepart(f);
 cout<<"enter the name of doc"<<endl;
