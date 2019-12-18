@@ -1,0 +1,82 @@
+#include <iostream>
+#include <fstream>
+#include "patient.h"
+#include "doctor.h"
+#include "hospital.h"
+int main(int argc, char** argv) {
+ofstream myfile("patient disease.txt");
+patient h1;
+string x;
+cout<<"enter the history of patient"<<endl;
+cin>>x;
+h1.sethistory(x);
+int z;
+cout<<"enter the age of patient"<<endl;
+cin>>z;
+h1.setage(z);
+string y;
+cout<<"enter patient name"<<endl;
+cin>>y;
+h1.setname(y);
+cout<<"all information about the patient"<<endl;
+cout<<"patient name is"<<endl;
+cout<<h1.getname()<<endl;
+cout<<"patient age is"<<endl;
+cout<<h1.getage()<<endl;
+cout<<"history of patient"<<endl;
+myfile<<"the patient disease :"<<endl;
+myfile<<h1.gethistory()<<endl;
+cout << h1.gethistory()<<endl;
+cout<< "     End of the patient information     "<<endl;
+Doctor d1;
+cout<<"enter the age of doctor"<<endl;
+int u;
+cin>>u;
+d1.setage(u);
+cout<<"choose one department of the doc you want (Neurology-Oncology-Emergency-Obstetrics)"<<endl;
+string f;
+cin>>f;
+d1.setdepart(f);
+cout<<"enter the name of doc"<<endl;
+string a;
+cin>>a;
+d1.setname(a);
+cout<<"enter the number of patients with the doc"<<endl;
+int b;
+cin>>b;
+d1.setnumber_of_patient(b);
+cout<<"edit of patient history"<<endl;
+string c;
+cin>>c;
+d1.editpatienthistory(c);
+cout<<"name of doc"<<endl;
+cout<<d1.getname()<<endl;
+cout<<"age of doc"<<endl;
+cout<<d1.getage()<<endl;
+cout<<"patient's number"<<endl;
+cout<<d1.getnumber_of_patient()<<endl;
+cout<<"edit patient history"<<endl;
+myfile<<"the update of doctor for the patient disease :"<<endl;
+myfile<<d1.geteditpatienthistory()<<endl;
+cout<<d1.geteditpatienthistory()<<endl;
+cout<<"doctor reserve a room for patient who need extra care "<<endl;
+d1.roomsvalidator ();
+cout<< "     End of the doctor information     "<<endl;
+ofstream myfile2;
+myfile2.open ("patients_name.txt",ios ::app);
+myfile2<<h1.getname()<<endl;
+myfile2.close();
+ofstream myfile3;
+myfile3.open ("doctors_name.txt",ios ::app);
+myfile3<<d1.getname()<<endl;
+myfile3.close();
+Hospital s1;
+cout<<"hospital data"<<endl;
+cout<<"the rooms number"<<endl;
+cout<<s1.getroomsnumber()<<endl;
+cout<<"the departments in the hospital"<<endl;
+cout<<"the first department is \n"<<s1.getdepartment1()<<"\nthe secound department is \n"<<s1.getdepartment2()<<"\nthe third department is \n"<<s1.getdepartment3()<<"\nthe fourth department is \n"<<s1.getdepartment4()<<endl;
+cout<<"the data for all patients and doctors names and rooms reserved"<<endl;
+s1.getrepost();
+	return 0;
+}
