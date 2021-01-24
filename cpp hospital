@@ -1,0 +1,15 @@
+myfile2.open ("patients_name.txt",ios ::app);
+myfile2<<h1.getname()<<endl;
+myfile2.close();
+ofstream myfile3;
+myfile3.open ("doctors_name.txt",ios ::app);
+myfile3<<d1.getname()<<endl;
+myfile3.close();
+Hospital s1;
+cout<<"hospital data"<<endl;
+cout<<"the rooms number"<<endl;
+cout<<s1.getroomsnumber()<<endl;
+cout<<"the departments in the hospital"<<endl;
+cout<<"the first department is \n"<<s1.getdepartment1()<<"\nthe secound department is \n"<<s1.getdepartment2()<<"\nthe third department is \n"<<s1.getdepartment3()<<"\nthe fourth department is \n"<<s1.getdepartment4()<<endl;
+cout<<"the data for all patients and doctors names and rooms reserved"<<endl;
+s1.getrepost();
